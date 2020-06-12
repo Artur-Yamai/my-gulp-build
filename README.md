@@ -4,7 +4,7 @@
 
 Для работы понадобятся:
 
-## git init
+## gulp init
 
 ## gulp start
 
