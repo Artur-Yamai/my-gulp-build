@@ -1,4 +1,4 @@
-# SASS, Buble, browserSync, concat
+# SASS, Bable, browserSync, concat
 
 ## gulp init
 

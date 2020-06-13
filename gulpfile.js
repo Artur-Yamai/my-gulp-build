@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync');
-const buble = require('gulp-buble');
+const babel = require('gulp-babel') ;
 
 //порядок компиляции стилей
 const styles = [
@@ -20,7 +20,9 @@ gulp.task('sass', function() {
 
 gulp.task('scripts', function() {
     return gulp.src('app/**/*.js')
-        .pipe(buble())
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
         .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.reload({stream: true}))
